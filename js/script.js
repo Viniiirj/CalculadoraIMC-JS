@@ -22,17 +22,12 @@ form.onsubmit = (event) => {
   }
   AlertError.close()
 
-  
-
-  const result = calculateIMC(height, height)
+  const result = calculateIMC(weight, height)
   displayResultMessage(result)
 }
-
-
 
 function displayResultMessage(result) {
   const message = `Seu IMC é de ${result}`
   Modal.message.innerText = message
   Modal.open()
-  
 }
